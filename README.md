@@ -89,20 +89,20 @@ The prototype is a UI-only sandbox. The design below describes the production pl
 
 ```mermaid
 flowchart LR
-A["Department Systems<br/>(Shop, Factories, Labour, KSPCB...)"] -->|read-only extracts| B["Connector Layer"]
+A["Department Systems (Shop, Factories, Labour, KSPCB...)"] -->|read-only extracts| B["Connector Layer"]
 A -->|one-way events| C["Event Ingest"]
 
-B --> D["Staging Store<br/>(raw snapshots)"]
-D --> E["Normalization Service<br/>(name/address/PIN canonicalization)"]
+B --> D["Staging Store (raw snapshots)"]
+D --> E["Normalization Service (name/address/PIN canonicalization)"]
 E --> F["Blocking + Candidate Generation"]
-F --> G["Entity Resolution Scorer<br/>(confidence + evidence)"]
+F --> G["Entity Resolution Scorer (confidence + evidence)"]
 
 G -->|auto-link| H["UBID Graph Store"]
 G -->|needs review| I["Review Queue"]
 I -->|approve/reject| H
 
-C --> J["Event Joiner<br/>(join confidence + evidence)"]
-J --> K["Activity Classifier<br/>(Active/Dormant/Closed)"]
+C --> J["Event Joiner (join confidence + evidence)"]
+J --> K["Activity Classifier (Active/Dormant/Closed)"]
 
 H --> L["Query/API Layer"]
 K --> L

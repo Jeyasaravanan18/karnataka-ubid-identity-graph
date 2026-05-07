@@ -13,19 +13,19 @@ This document expands the production path described in the repository `README.md
 
 ```mermaid
 flowchart LR
-A["Department Systems<br/>(40+ isolated apps)"] -->|read-only snapshots| B["Connector Layer"]
+A["Department Systems (40+ isolated apps)"] -->|read-only snapshots| B["Connector Layer"]
 A -->|one-way events| C["Event Ingest"]
 
-B --> D["Staging Store<br/>immutable snapshots"]
-D --> E["Normalization<br/>canonical name/address/PIN"]
+B --> D["Staging Store (immutable snapshots)"]
+D --> E["Normalization (canonical name/address/PIN)"]
 E --> F["Blocking + Candidate Generation"]
-F --> G["Resolver Scoring<br/>confidence + evidence"]
+F --> G["Resolver Scoring (confidence + evidence)"]
 G -->|auto-link| H["UBID Identity Graph"]
 G -->|review| I["Reviewer Queue"]
 I -->|decision labels| H
 
-C --> J["Event Joiner<br/>join confidence + evidence"]
-J --> K["Activity Classifier<br/>Active/Dormant/Closed"]
+C --> J["Event Joiner (join confidence + evidence)"]
+J --> K["Activity Classifier (Active/Dormant/Closed)"]
 
 H --> L["API + Query Layer"]
 K --> L

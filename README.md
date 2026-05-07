@@ -4,6 +4,8 @@ An interactive prototype for **AI for Bharat (Theme 1)**: creating a **Unique Bu
 
 Live demo: https://d4rv5gb2fnpti.cloudfront.net/
 
+Video walkthrough: https://drive.google.com/file/d/1iBWmrVidyWHheQPNu9COe0w8JzIrCaA1/view?usp=sharing
+
 This repository contains:
 
 - A working UI prototype (runs fully on deterministic synthetic data).

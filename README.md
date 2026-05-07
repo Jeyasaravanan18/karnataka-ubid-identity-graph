@@ -2,6 +2,8 @@
 
 An interactive prototype for **AI for Bharat (Theme 1)**: creating a **Unique Business Identifier (UBID)** across Karnataka State department systems, and inferring **Active / Dormant / Closed** status from one-way activity streams with **explainable, reversible decisions**.
 
+Live demo: https://d4rv5gb2fnpti.cloudfront.net/
+
 This repository contains:
 
 - A working UI prototype (runs fully on deterministic synthetic data).
@@ -44,7 +46,7 @@ The platform here adds a **UBID layer beside existing systems** (no migration, n
 Prerequisites: Node.js 20+.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 

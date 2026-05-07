@@ -80,7 +80,6 @@ backup-ui-*      local backups (gitignored)
 - `docs/ML_WORKFLOW.md` - entity resolution + activity inference workflow
 - `docs/DATA_MODEL.md` - reference data model + evidence storage
 - `docs/DEPLOYMENT.md` - scalability, deployment, and security posture
-- `docs/AWS_HOSTING.md` - AWS S3 + CloudFront hosting (no domain) + GitHub deploy
 
 ## Architecture & Technical Design (Production Path)
 
@@ -181,3 +180,4 @@ API shape (illustrative):
 - **Human review load control**: tighten thresholds to minimize merges; prioritize false-merge avoidance.
 - **Deployment**: containerized services (K8s), separate worker pools for scoring and ingestion, Postgres HA.
 - **Security**: keep scrambled fixtures and hashed identifiers; full PII remains in source systems.
+
